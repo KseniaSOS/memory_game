@@ -74,15 +74,15 @@ def computer_turn(index_list):
     return selected_indexes, selected_indexes_str
 
 
-def run_game(board: Board, messages: dict):
+def run_game(board: Board, layout: dict):
     """
 
 
     """
-    print("logo")
-    # input("\nShall we get started? Hit Enter to continue...")
-    # user_name = input("Please enter your name:")
-    # print(f"Welcome {user_name}! Here are the rules:")
+    print(layout["logo"])
+    input("\nShall we get started? Hit Enter to continue...")
+    user_name = input("Please enter your name:")
+    print(f"Welcome {user_name}! Here are the rules:")
     print(display_rules())
 
     # test
@@ -115,7 +115,7 @@ def run_game(board: Board, messages: dict):
         print(board)
 
         # player takes a turn
-        selected_indexes, selected_indexes_str = player_turn(index_dict, messages)
+        selected_indexes, selected_indexes_str = player_turn(index_dict, layout['messages'])
         for i in range(2):
             board.flip_board_element(selected_indexes[i])
         print(board)

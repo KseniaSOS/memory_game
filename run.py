@@ -25,4 +25,4 @@ if __name__ == '__main__':
     my_board.populate_board(card_elements)
 
     # run the game
-    run_game(my_board, layout['messages'])
+    run_game(my_board, layout)
