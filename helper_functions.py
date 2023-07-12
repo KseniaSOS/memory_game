@@ -121,3 +121,37 @@ def create_card_frame(card_element: str, frame_elements: dict, frame_size: dict)
     # framed_card_element = f"{top_cover}{var1}{var2}{var3}{bottom_cover}"
 
     return framed_card_element
+
+
+def merge_str_line_by_line(string1: str, string2: str):
+
+    # split each string into lines using the newline character as separator
+    string1_lines = string1.split('\n')
+    string2_lines = string2.split('\n')
+
+    # merge the two strings line by line (https://shorturl.at/kwIJ4)
+    merged_lines = []
+    for x, y in zip(string1_lines, string2_lines):
+        merged_lines.append(f"{x}{y}")
+    final_string = "\n".join(merged_lines)
+
+    return final_string
+
+
+def create_nested_list(list1: List[int], list2: List[int]):
+    """
+
+    :param list1:
+    :param list2:
+    :return:
+    """
+
+    # allocate nested list
+    nested_list = []
+    # go through list elements in a nested loop to create the nested list.
+    for idx1 in range(len(list1)):
+        for idx2 in range(len(list2)):
+            # append the list elements as a joint list
+            nested_list.append([list1[idx1], list2[idx2]])
+
+    return nested_list
