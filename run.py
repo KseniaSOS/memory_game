@@ -27,9 +27,9 @@ if __name__ == '__main__':
     # initialize the game board
     my_board = Board(layout['board_size'], empty_frame_element)
     my_board.populate_board(card_elements)
-    my_board.flip_all_elements()
-    print(my_board)
-    exit(0)
+    # my_board.flip_all_elements()
+    # print(my_board)
+    # exit(0)
 
     # run the game
     run_game(my_board, layout['messages'])
