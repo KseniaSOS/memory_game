@@ -1,11 +1,8 @@
-import json
 from random import randint
-from typing import List
 from time import sleep
 
-from helper_functions import create_card_frame, create_empty_frame, create_nested_list
-from classes import BoardElement, Board
-from input_checker import check_input
+from helper_functions import create_nested_list, check_input
+from classes import Board
 
 
 def display_rules():
@@ -66,13 +63,15 @@ def computer_turn(index_list):
     # draw 2 random indices from input list
     _index_list = index_list.copy()
     selected_indexes = []
+    selected_indexes_str = []
     for i in range(2):
         idx = randint(0, len(_index_list) - 1)
         selected_index = _index_list[idx]
         selected_indexes.append(selected_index)
+        selected_indexes_str.append(str(selected_index[0]) + str(selected_index[1]))
         _index_list.pop(idx)
 
-    return selected_indexes
+    return selected_indexes, selected_indexes_str
 
 
 def run_game(board: Board, messages: dict):
@@ -101,10 +100,12 @@ def run_game(board: Board, messages: dict):
     nb_flipped_cards = board.count_flipped_cards()
     nb_used_board_cells = board.nb_used_board_cells
 
-    # create nested list of indexes packed in a dictionary for input checking and element selection
+    # create nested list of indexes packed in a dictionary for user input checking and element selection
     rows = list(range(board.board_size[0]))
     cols = list(range(board.board_size[1]))
+    # list of board indexes
     nested_list = create_nested_list(rows, cols)
+    # string versions of the board indexes (easier to use for input checking, as it is string)
     keys = [str(nested_list[x][0]) + str(nested_list[x][1]) for x in range(len(nested_list))]
     index_dict = dict(zip(keys, nested_list))
 
@@ -134,13 +135,13 @@ def run_game(board: Board, messages: dict):
                 board.flip_board_element(selected_indexes[i])
         sleep(5)
 
-        # check if all cards are flipped
+        # check if all cards are already flipped by the player
         if nb_flipped_cards == nb_used_board_cells:
             break
 
         # computer takes a turn
         print("Computer takes a turn...")
-        selected_indexes = computer_turn(nested_list)
+        selected_indexes, selected_indexes_str = computer_turn(nested_list)
         for i in range(2):
             board.flip_board_element(selected_indexes[i])
         print(board)
@@ -151,6 +152,7 @@ def run_game(board: Board, messages: dict):
             print("Computer successful!")
             display_score(player_score, computer_score)
             for i in range(2):
+                index_dict.pop(selected_indexes_str[i])
                 nested_list.remove(selected_indexes[i])
             nb_flipped_cards = board.count_flipped_cards()
         else:

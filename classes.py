@@ -35,6 +35,12 @@ class BoardElement:
 
     @card_back.setter
     def card_back(self, element_idx: List[int]):
+        """
+        This method sets the value of the private attribute _card_back and expects a list of two integers.
+        Example usage: 'element.card_back = [1, 2]'
+        :param element_idx:             list of two integers, e.g. [2, 3]
+        :return:
+        """
         self._card_back = create_card_frame(f"{element_idx[0]}{element_idx[1]}", self._frame_elements, self._frame_size)
 
     @property
@@ -42,6 +48,10 @@ class BoardElement:
         return self._element_name
 
     def __str__(self):
+        """
+        Custom functionality for the default __str__ method for printing content
+        :return:
+        """
         if self.is_visible:
             return self.card_front
         else:
@@ -141,6 +151,7 @@ class Board:
             idx = randint(0, len(index_list) - 1)
             self.insert_board_element(element.__copy__(), index_list[idx])
             index_list.pop(idx)
+            # update the number of cards on the board with +2 since we have a pair.
             self._nb_used_board_cells += 2
             if self._nb_used_board_cells == self.board_size[0] * self.board_size[1]:
                 break
@@ -170,7 +181,7 @@ class Board:
 
     def check_board_element_match(self, idx1, idx2):
         """
-
+        Check by card element name whether two elements selected by respective indexes are a match.
         :param idx1:
         :param idx2:
         :return:
