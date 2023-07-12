@@ -1,0 +1,30 @@
+{
+    "board_size": [4, 4],
+    "frame_size": {
+      "frame_width": 15,
+      "frame_height": 5
+    },
+    "frame_elements": {
+      "side_element": "|",
+      "corner_element": "*",
+      "top_element": "-",
+      "bottom_element": "-"
+    },
+    "card_elements": {
+      "crown": "o  o   o  o\n|\\/ \\^/ \\/|\n|.-------.|",
+      "plain": " __!__\n____(_)____\n !  !  !",
+      "glasses": "/\\     /\\\n   \\ _____\\\n    (_)-(_)",
+      "umbrella": " .-^-.\n'\"'|`\"`\n j",
+      "butterfly": "((^\\V/^))\n \\\\_|_//\n ((/|\\))",
+      "sun": " \\ | /\n--(_)--\n / | \\",
+      "cat": "|\\---/|\n| o_o |\n \\_^_/",
+      "cyclist": "    __o \n  _ \\<_ \n (_)/(_)"
+    },
+   "logo": {
+      "memory_game": "000"
+    },
+    "messages": {
+      "input_message" : "Please enter the card number:",
+      "error_message": "Incorrect card number, please enter a correct one!"
+    }
+}
