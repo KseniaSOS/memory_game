@@ -12,10 +12,11 @@ def display_rules():
     """
     rules = """
     The objective of Memory Game is to defeat your computer opponent by
-    correctly guessing a pair of cards. At the beggining of the game, all 16 cards 
-    with ASCCI images will be randomply placed in the terminal. At first You will 
-    need to guess the first card, then the second one. If they match, You will get 
-    a point. Iterate untill all pair of cards are found."""
+    correctly guessing a pair of cards. At the beggining of the game, all 
+    16 cards with ASCCI images will be randomply placed in the terminal. 
+    At first You will need to guess the first card, then the second one.
+    If they match, You will get a point. Iterate untill all pair of cards 
+    are found."""
 
     return rules
 
