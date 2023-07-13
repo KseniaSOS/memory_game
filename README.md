@@ -1,32 +1,227 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Memory Game**
+Memory Game is a Python terminal game, which runs on Heroku. It is a simple logic game, where  users competes with computer, by finding all pairs of cards.
 
-Welcome,
+[View live website here](https://memory-game-3p-9d47756bf9a5.herokuapp.com/)
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+![responsive design]()
 
-## Reminders
+# Table of Content
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+* [**Project**](<#project>)
+    * [Site Users Goal](<#site-users-goal>)
+    * [User Stories](<#user-stories>)
+    * [Site Owners Goal](<#site-owners-goal>)
 
-## Creating the Heroku app
+* [**User Experience (UX)**](<#user-experience-ux>)
+    * [Site Structure](<#site-structure>)
+    * [Flow chart](<#flow-chart>)    
+    * [Design Choices](<#design-choices>)
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+* [**Features**](<#features>)
+    * [List Collection](<#list-collection>)
 
-1. `heroku/python`
-2. `heroku/nodejs`
+* [**Features Left To Implement**](<#features-left-to-implement>)
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+* [**Technologies Used**](<#technologies-used>)
+    * [Languages](<#languages>)
+    * [Frameworks, Librarys & Software](<#frameworks-libraries--software>)
+    * [Python Packages](<#python-packages>)
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+* [**Testing**](<#testing>)
+  * [Code Validation](<#code-validation>)
+  * [Known Bugs](<#known-bugs>)
+* [Deployment](<#deployment>)
+* [Credits](<#credits>)
+* [Acknowledgements](<#acknowledgements>)
 
-Connect your GitHub repository and deploy as normal.
+# **Project**
 
-## Constraints
+## Site Users Goal
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+## User Stories
 
----
+## Site Owners Goal
 
-Happy coding!
+# **User Experience (UX)**
+
+## Flow chart
+
+<details><summary><b>Flow Chart</b></summary>
+
+![Flow Chart]()
+</details><br/>
+
+[Back to top](<#table-of-content>)
+
+## Site Structure
+
+## Design Choices
+
+* ### Typography
+No specific typography is being used in the application. The font is just the standard font that is being used in the terminal.
+
+[Back to top](<#table-of-content>)
+
+# **Features**
+## **Existing Features**
+
+[Back to top](<#table-of-content>)
+
+### Features Left to Implement
+
+* 
+
+[Back to top](<#table-of-content>)
+
+# Technologies Used
+
+## Languages
+
+* [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) - Provides the functionality for the application.
+
+## Frameworks, Libraries & Software
+
+* [PyCharm](https://www.jetbrains.com/pycharm/) - Used a local program on own PC
+* [Github](https://github.com/) - Used to host and edit the website.
+* [Heroku](https://en.wikipedia.org/wiki/Heroku) - A cloud platform that the application is deployed to.
+
+
+## Python Packages
+
+* [Time](https://docs.python.org/3/library/time.html) - A module that provides various time-related functions
+
+[Back to top](<#table-of-content>)
+
+# Testing
+
+## Code Validation
+The "Memory Game" has been tested through [PEP Online Validator](http://pep8online.com/).
+
+[Back to top](<#table-of-content>)
+
+### PEP Validation
+
+<details><summary><b>PEP Validation Result</b></summary>
+
+![PEP Validation]()
+</details><br/>
+
+[Back to top](<#table-of-content>)
+
+## Known bugs
+### Fixed Bugs
+
+*
+
+# Deployment
+
+## Deployment To Heroku
+
+The project was deployed to [Heroku](https://www.heroku.com). To deploy, please follow the process below:
+
+1. Log in to Heroku (or create an account if needed).
+
+<details><summary><b>Heroku Step 1</b></summary>
+
+![Heroku Step 1](/assets/readme_images/heroku_step_1.png)
+</details><br />
+
+2. Click on button to 'Create new app'.
+
+<details><summary><b>Heroku Step 2</b></summary>
+
+![Heroku Step 2](/assets/readme_images/heroku_step_1.png)
+</details><br />
+
+3. Enter an application name that needs to be unique. Enter the name, select your region and click 'Create app".
+
+<details><summary><b>Heroku Step 3</b></summary>
+
+![Heroku Step 3](/assets/readme_images/heroku_step_1.png)
+</details><br />
+
+4. On the next page, click the 'Settings' tab and find the "Config Vars" section. Click on "Reveal Config Vars" button. Using uppercase letters add 'PORT' to the key box and '8000' to the value box.
+Click 'Add'.
+
+<details><summary><b>Heroku Step 4</b></summary>
+
+![Heroku Step 4](/assets/readme_images/heroku_step_1.png)
+</details><br />
+
+5. Scroll down to the buildpacks section on the settings page and click the button 'Add buildpack'.
+
+<details><summary><b>Heroku Step 5</b></summary>
+
+![Heroku Step 5](/assets/readme_images/heroku_step_1.png)
+</details><br />
+
+6. Add "Python" and node.js". It is important that Python is listed above node.js. If it's not you can sort it by dragging and dropping.
+
+<details><summary><b>Heroku Step 6</b></summary>
+
+![Heroku Step 6](readme/assets/images/heroku_step_6.png)
+</details><br />
+
+7. Now it's time for deployment. Scroll to the top of the settings page and click the 'Deploy' tab. For deployment method, select 'Github'. Search for the repository name you want to deploy and then click connect.
+
+<details><summary><b>Heroku Step 7</b></summary>
+
+![Heroku Step 7](readme/assets/images/heroku_step_7.png)
+</details><br />
+
+8. Scroll down on the deploy page and choose deployment type. Choose to enable automatic deployments if you want to and then click 'Deploy Branch'.
+
+<details><summary><b>Heroku Step 8</b></summary>
+
+![Heroku Step 8](assets/readme-images/heroku_step_8.png)
+</details><br />
+
+The live link to the "Memory Game" Github repository can be found [here](https://github.com/KseniaSOS/memory_game).
+
+[Back to top](<#table-of-content>)
+
+## How To Fork The Repository On GitHub
+
+A copy of the GitHub Repository can be made by forking the GitHub account. This copy can be viewed and changes can be made to the copy without affecting the original repository. Take the following steps to fork the repository:
+
+Log in to GitHub and locate the repository.
+On the right hand side of the page inline with the repository name is a button called 'Fork', click on the button to create a copy of the original repository in your GitHub Account.
+
+<details><summary><b>Github Fork</b></summary>
+
+![Fork](assets/readme_images/github_fork.png)
+</details><br />
+
+[Back to top](<#table-of-content>)
+
+## Create A Local Clone of A Project
+
+The method for cloning a project from GitHub is described below:
+
+Under the repository’s name, click on the code tab.
+In the Clone with HTTPS section, click on the clipboard icon to copy the given URL.
+
+<details><summary><b>Github Create Local Clone</b></summary>
+
+![Clone](assets/readme_images/github_local_clone.png)
+</details><br />
+
+[Back to top](<#table-of-content>)
+
+# Credits
+
+* [Real Python](https://realpython.com/lessons/how-and-when-use-str/) - 'How and When to use _ str _' 
+* [Geeks for Geeks](https://rb.gy/rt2wz) - Using @property decorators 
+* [ASCII Art Generator](http://patorjk.com/software/taag/#p=display&h=0&v=2&f=Dancing%20Font&t=memory%20%0A%20%20game) - This ASCII generator was used to create the game logo 
+* [ASCII Art ](https://www.asciiart.eu/) - This ollection of ASCII art drawings was used for cards images
+* [Lucid](https://lucid.app/) - There was made a flow chart for this project 
+* [Am I Responsive?](https://ui.dev/amiresponsive) - Responsive deisign image
+
+[Back to top](<#table-of-content>)
+
+# Acknowledgements
+
+[Back to top](<#table-of-content>)
+
+
+
