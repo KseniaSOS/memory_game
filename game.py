@@ -1,6 +1,7 @@
 from random import randint
 from time import sleep
 
+
 from helper_functions import create_nested_list, check_input
 from classes import Board
 
@@ -23,13 +24,8 @@ def display_score(player_score, computer_score):
 
 def player_turn(index_dict, messages: dict):
     """
-    Asks the user for two input indices
-
-    :param index_dict:
-    :param messages:
-    :return:
+    Asks the user for two input indices.
     """
-
     # pre-allocate some variables
     selected_indexes = []
     selected_indexes_str = []
@@ -49,12 +45,9 @@ def player_turn(index_dict, messages: dict):
 
 def computer_turn(index_list):
     """
-
-    :param index_list:
-    :return:
+    The function allows the computer to choose its cards. Draw 2 random indices from input list.
     """
 
-    # draw 2 random indices from input list
     _index_list = index_list.copy()
     selected_indexes = []
     selected_indexes_str = []
@@ -70,8 +63,7 @@ def computer_turn(index_list):
 
 def run_game(board: Board, layout: dict):
     """
-
-
+    The functions starts a game. Prints logo and welcome messages.
     """
     print(layout["logo"])
     input("\nShall we get started? Hit Enter to continue...\n")
@@ -79,12 +71,6 @@ def run_game(board: Board, layout: dict):
     print(f"Welcome {user_name}! Here are the rules:\n")
     print(display_rules())
 
-    # test
-    # board.flip_board_element([2, 3])
-    # board.flip_all_elements()
-    # print(board)
-
-    # preliminaries
 
     # initialize scores
     player_score = 0
@@ -114,7 +100,7 @@ def run_game(board: Board, layout: dict):
             board.flip_board_element(selected_indexes[i])
         print(board)
 
-        # check if successful and update the score
+        # check if successful and update the score. Prints an appropriate message.Creates a delay before executing next code(sleep)
         if board.check_board_element_match(selected_indexes[0], selected_indexes[1]):
             player_score += 1
             print("Player successful!")
