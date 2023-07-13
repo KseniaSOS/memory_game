@@ -7,22 +7,16 @@ from classes import Board
 
 def display_rules():
     """
-    Function prototype for displaying rules, might need some parameters.
-    Could print some text, a card in different states, the empty board, etc.
-    :return:
+    This function displays rules in terminal
     """
-
-    rules = "Rules..."
+    rules = "The objective of Memory Game is to defeat your computer opponent by correctly guessing a pair of cards. At the beggining of the game, all 16 cards with ASCCI images will be randomply placed in the terminal. At first You will need to guess the first card, then the second one. If they match, You will get a point. Iterate untill all pair of cards are found."
 
     return rules
 
 
 def display_score(player_score, computer_score):
     """
-
-    :param player_score:
-    :param computer_score:
-    :return:
+    This functions displays players and computer score.
     """
     return print(f"Current score: player - {player_score}, computer - {computer_score}")
 
@@ -80,9 +74,9 @@ def run_game(board: Board, layout: dict):
 
     """
     print(layout["logo"])
-    input("\nShall we get started? Hit Enter to continue...")
-    user_name = input("Please enter your name:")
-    print(f"Welcome {user_name}! Here are the rules:")
+    input("\nShall we get started? Hit Enter to continue...\n")
+    user_name = input("Please enter your name:\n")
+    print(f"Welcome {user_name}! Here are the rules:\n")
     print(display_rules())
 
     # test
