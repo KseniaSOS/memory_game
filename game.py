@@ -66,11 +66,11 @@ def run_game(board: Board, layout: dict):
     The functions starts a game. Prints logo and welcome messages.
     """
     print(layout["logo"])
-    input("\nShall we get started? Hit Enter to continue...")
-    user_name = input("Please enter your name:")
+    input("\nShall we get started? Hit Enter to continue...\n")
+    user_name = input("Please enter your name:\n")
     print(f"Welcome {user_name}! Here are the rules:")
     print(display_rules())
-    input("Hit Enter to continue...")
+    input("Hit Enter to continue...\n")
 
 
     # initialize scores
