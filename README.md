@@ -3,7 +3,7 @@ Memory Game is a Python terminal game, which runs on Heroku. It is a simple logi
 
 [View live website here](https://memory-game-3p-9d47756bf9a5.herokuapp.com/)
 
-![responsive design]()
+![responsive design](/assets/readme-images/responsive_design.png)
 
 # Table of Content
 
@@ -123,21 +123,21 @@ The project was deployed to [Heroku](https://www.heroku.com). To deploy, please 
 
 <details><summary><b>Heroku Step 1</b></summary>
 
-![Heroku Step 1](/assets/readme_images/heroku_step_1.png)
+![Heroku Step 1](/assets/readme-images/heroku-step_1.png)
 </details><br />
 
 2. Click on button to 'Create new app'.
 
 <details><summary><b>Heroku Step 2</b></summary>
 
-![Heroku Step 2](/assets/readme_images/heroku_step_1.png)
+![Heroku Step 2](assets/readme-images/heroku_step_2.png)
 </details><br />
 
 3. Enter an application name that needs to be unique. Enter the name, select your region and click 'Create app".
 
 <details><summary><b>Heroku Step 3</b></summary>
 
-![Heroku Step 3](/assets/readme_images/heroku_step_1.png)
+![Heroku Step 3](assets/readme-images/heroku_step_3.png)
 </details><br />
 
 4. On the next page, click the 'Settings' tab and find the "Config Vars" section. Click on "Reveal Config Vars" button. Using uppercase letters add 'PORT' to the key box and '8000' to the value box.
@@ -145,38 +145,34 @@ Click 'Add'.
 
 <details><summary><b>Heroku Step 4</b></summary>
 
-![Heroku Step 4](/assets/readme_images/heroku_step_1.png)
+![Heroku Step 4](assets/readme-images/heroku_step_4.png)
 </details><br />
 
 5. Scroll down to the buildpacks section on the settings page and click the button 'Add buildpack'.
 
 <details><summary><b>Heroku Step 5</b></summary>
 
-![Heroku Step 5](/assets/readme_images/heroku_step_1.png)
+![Heroku Step 5](assets/readme-images/heroku_step_5.png)
 </details><br />
 
 6. Add "Python" and node.js". It is important that Python is listed above node.js. If it's not you can sort it by dragging and dropping.
 
 <details><summary><b>Heroku Step 6</b></summary>
 
-![Heroku Step 6](readme/assets/images/heroku_step_6.png)
+![Heroku Step 6](assets/readme-images/heroku_step_6.png)
 </details><br />
 
-7. Now it's time for deployment. Scroll to the top of the settings page and click the 'Deploy' tab. For deployment method, select 'Github'. Search for the repository name you want to deploy and then click connect.
+7. For deployment, scroll to the top of the settings page and click the 'Deploy' tab. For deployment method, select 'Github'. Search for the repository name you want to deploy and then click connect.
 
-<details><summary><b>Heroku Step 7</b></summary>
-
-![Heroku Step 7](readme/assets/images/heroku_step_7.png)
-</details><br />
 
 8. Scroll down on the deploy page and choose deployment type. Choose to enable automatic deployments if you want to and then click 'Deploy Branch'.
 
 <details><summary><b>Heroku Step 8</b></summary>
 
-![Heroku Step 8](assets/readme-images/heroku_step_8.png)
+![Heroku Step 8](/assets/readme-images/heroku_step_8.png)
 </details><br />
 
-The live link to the "Memory Game" Github repository can be found [here](https://github.com/KseniaSOS/memory_game).
+The link to the "Memory Game" Github repository can be found [here](https://github.com/KseniaSOS/memory_game).
 
 [Back to top](<#table-of-content>)
 
@@ -184,12 +180,13 @@ The live link to the "Memory Game" Github repository can be found [here](https:/
 
 A copy of the GitHub Repository can be made by forking the GitHub account. This copy can be viewed and changes can be made to the copy without affecting the original repository. Take the following steps to fork the repository:
 
-Log in to GitHub and locate the repository.
-On the right hand side of the page inline with the repository name is a button called 'Fork', click on the button to create a copy of the original repository in your GitHub Account.
+1. Log in to **GitHub** and locate the [repository](https://github.com/KseniaSOS/memory_game).
+2. On the right hand side of the page inline with the repository name is a button called **'Fork'**, click on the button to create a copy of the original repository in your GitHub Account.
+
 
 <details><summary><b>Github Fork</b></summary>
 
-![Fork](assets/readme_images/github_fork.png)
+![Fork](/assets/readme-images/forking.png)
 </details><br />
 
 [Back to top](<#table-of-content>)
@@ -198,12 +195,17 @@ On the right hand side of the page inline with the repository name is a button c
 
 The method for cloning a project from GitHub is described below:
 
-Under the repository’s name, click on the code tab.
-In the Clone with HTTPS section, click on the clipboard icon to copy the given URL.
+1. Under the repository’s name, click on the **code** tab.
+2. In the **Clone with HTTPS** section, click on the clipboard icon to copy the given URL.
+3. In your IDE of choice, open **Git Bash**.
+4. Change the current working directory to the location where you want the cloned directory to be created.
+5. Type **git clone**, and then paste the URL copied from GitHub.
+6. Press **enter** and the local clone will be created.
+
 
 <details><summary><b>Github Create Local Clone</b></summary>
 
-![Clone](assets/readme_images/github_local_clone.png)
+![Clone](/assets/readme-images/clone.png)
 </details><br />
 
 [Back to top](<#table-of-content>)
