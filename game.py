@@ -12,10 +12,10 @@ def display_rules():
     """
     rules = """
     The objective of Memory Game is to defeat your computer opponent by
-    correctly guessing a pair of cards. At the beggining of the game, all 
-    16 cards with ASCCI images will be randomply placed in the terminal. 
+    correctly guessing a pair of cards. At the beggining of the game, all
+    16 cards with ASCCI images will be randomply placed in the terminal.
     At first You will need to guess the first card, then the second one.
-    If they match, You will get a point. Iterate untill all pair of cards 
+    If they match, You will get a point. Iterate untill all pair of cards
     are found."""
 
     return rules
@@ -25,7 +25,8 @@ def display_score(player_score, computer_score):
     """
     This functions displays players and computer score.
     """
-    return print(f"Current score: player - {player_score}, computer - {computer_score}")
+    return print(
+        f"Current score: player - {player_score}, computer - {computer_score}")
 
 
 def player_turn(index_dict, messages: dict):
@@ -40,7 +41,8 @@ def player_turn(index_dict, messages: dict):
     for i in range(2):
         # check user input
         keys = list(_index_dict.keys())
-        input_value = check_input(keys, messages['input_message'], messages['error_message'])
+        input_value = check_input(
+            keys, messages['input_message'], messages['error_message'])
         selected_index = _index_dict[input_value]
         selected_indexes.append(selected_index)
         selected_indexes_str.append(input_value)
@@ -51,7 +53,8 @@ def player_turn(index_dict, messages: dict):
 
 def computer_turn(index_list):
     """
-    The function allows the computer to choose its cards. Draw 2 random indices from input list.
+    The function allows the computer to choose its cards.
+    Draw 2 random indices from input list.
     """
 
     _index_list = index_list.copy()
@@ -78,7 +81,6 @@ def run_game(board: Board, layout: dict):
     print(display_rules())
     input("Hit Enter to continue...\n")
 
-
     # initialize scores
     player_score = 0
     computer_score = 0
@@ -87,12 +89,14 @@ def run_game(board: Board, layout: dict):
     nb_flipped_cards = board.count_flipped_cards()
     nb_used_board_cells = board.nb_used_board_cells
 
-    # create nested list of indexes packed in a dictionary for user input checking and element selection
+    # create nested list of indexes packed in a dictionary 
+    # for user input checking and element selection
     rows = list(range(board.board_size[0]))
     cols = list(range(board.board_size[1]))
     # list of board indexes
     nested_list = create_nested_list(rows, cols)
-    # string versions of the board indexes (easier to use for input checking, as it is string)
+    # string versions of the board indexes 
+    # (easier to use for input checking, as it is string)
     keys = [str(nested_list[x][0]) + str(nested_list[x][1]) for x in range(len(nested_list))]
     index_dict = dict(zip(keys, nested_list))
 
@@ -107,7 +111,9 @@ def run_game(board: Board, layout: dict):
             board.flip_board_element(selected_indexes[i])
         print(board)
 
-        # check if successful and update the score. Prints an appropriate message.Creates a delay before executing next code(sleep)
+        # check if successful and update the score.
+        # Prints an appropriate message.
+        # Creates a delay before executing next code(sleep).
         if board.check_board_element_match(selected_indexes[0], selected_indexes[1]):
             player_score += 1
             print("Player successful!")

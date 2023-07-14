@@ -82,6 +82,7 @@ No specific typography is being used in the application. The font is just the st
 ## Frameworks, Libraries & Software
 
 * [PyCharm](https://www.jetbrains.com/pycharm/) - Used a local program on own PC
+* [Gitpod](https://www.gitpod.io/#get-started) 
 * [Github](https://github.com/) - Used to host and edit the website.
 * [Heroku](https://en.wikipedia.org/wiki/Heroku) - A cloud platform that the application is deployed to.
 
@@ -222,6 +223,8 @@ The method for cloning a project from GitHub is described below:
 [Back to top](<#table-of-content>)
 
 # Acknowledgements
+
+I would like to acknowledge the Code Institute for the opportunity to work on such a project. It has been a challenging experience, but I have learned a lot. Special thanks goes to my family for their continued support, motivation and patience.
 
 [Back to top](<#table-of-content>)
 

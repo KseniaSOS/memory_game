@@ -4,9 +4,7 @@ from typing import List
 
 def parse_layout(layout_json):
     """
-
-    :param layout_json:
-    :return:
+    Reads json file and converts to dictionary.
     """
 
     # read json file
@@ -20,12 +18,7 @@ def parse_layout(layout_json):
 
 def create_vertical_padding(corner_element: str, padding_element: str, frame_width: int):
     """
-    Creates a vertical line with padding of cards frame
-
-    :param corner_element:
-    :param padding_element:
-    :param frame_width:
-    :return:
+    Creates a vertical line with padding of cards frame.
     """
 
     # create the padding line
@@ -38,11 +31,7 @@ def create_vertical_padding(corner_element: str, padding_element: str, frame_wid
 
 def create_blank_line(side_element: str, frame_width: int):
     """
-    Creates a blank line with side elements of cards frame
-
-    :param side_element:
-    :param frame_width:
-    :return:
+    Creates a blank line with side elements of cards frame.
     """
 
     # create blank line
@@ -55,12 +44,10 @@ def create_blank_line(side_element: str, frame_width: int):
 
 def create_empty_frame(frame_size: dict):
     """
-
-    :param frame_size:
-    :return:
+    Create the bulk of the empty frame without any padding with adding
+    a blank line to create an empty frame for the cards.
     """
-
-    # create the bulk of the empty frame without any padding
+   
     blank_line = "".join((frame_size['frame_width'] - 2) * [" "])
     empty_frame = "\n".join((frame_size['frame_height'] - 2) * [blank_line])
 
@@ -70,11 +57,6 @@ def create_empty_frame(frame_size: dict):
 def create_card_frame(card_element: str, frame_elements: dict, frame_size: dict):
     """
     This function creates a frame around a given card element
-    :param card_element:        string containing the card element
-    :param frame_elements:      dictionary with the following keys...
-    :param frame_size:          dictionary containing two integers specifying the frame size, e.g.
-                                {'height': 2, 'width': 3}.
-    :return:                    string containing the card element framed based using the frame elements
     """
 
     # create top and bottom card element frame elements
@@ -115,11 +97,6 @@ def create_card_frame(card_element: str, frame_elements: dict, frame_size: dict)
     framed_card_element = top_cover + "".join(frame_start_offset * [blank_line]) + \
         "".join(card_element_lines_framed) + "".join(frame_end_offset * [blank_line]) + bottom_cover
 
-    # var1 = "".join(frame_start_offset * [blank_line])
-    # var2 = "".join(card_element_lines_framed)
-    # var3 = "".join(frame_end_offset * [blank_line])
-    # framed_card_element = f"{top_cover}{var1}{var2}{var3}{bottom_cover}"
-
     return framed_card_element
 
 
@@ -140,15 +117,10 @@ def merge_str_line_by_line(string1: str, string2: str):
 
 def create_nested_list(list1: List[int], list2: List[int]):
     """
-
-    :param list1:
-    :param list2:
-    :return:
+    The Function allocate nested list and go through list elements
+    in a nested loop to create the nested list.
     """
-
-    # allocate nested list
     nested_list = []
-    # go through list elements in a nested loop to create the nested list.
     for idx1 in range(len(list1)):
         for idx2 in range(len(list2)):
             # append the list elements as a joint list
@@ -159,14 +131,10 @@ def create_nested_list(list1: List[int], list2: List[int]):
 
 def check_value(val: str, supp_vals: List[str], err_msg: str):
     """
-    Check whether the value ('val') is within a list of supported values ('supp_vals').
-    The function will either return 'True' or, in case of an incorrect value, raise a ValueError with the error
+    Check whether the value ('val') is within a list of supported
+    values ('supp_vals'). The function will either return 'True' or,
+    in case of an incorrect value, raise a ValueError with the error
     message specified by err_msg.
-
-    :param val:
-    :param supp_vals:
-    :param err_msg:
-    :return:
     """
 
     if val in supp_vals:
@@ -177,11 +145,8 @@ def check_value(val: str, supp_vals: List[str], err_msg: str):
 
 def check_input(supported_vals: List[str], inp_msg, err_msg):
     """
-
-    :param supported_vals:
-    :param inp_msg:
-    :param err_msg:
-    :return:
+    Check input, what a player has been selected.
+    Displays an error massage.
     """
     while True:
         try:
