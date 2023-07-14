@@ -5,18 +5,11 @@ from helper_functions import create_card_frame, create_empty_frame, merge_str_li
 
 class BoardElement:
     """
-    This class...
+    Creates the BoardElement class where all board objects will be added.
+    Indicates its state whether it is visible or not.
     """
 
     def __init__(self, element_name: str, element_content: str, frame_elements: dict, frame_size: dict):
-        """
-
-        :param element_name:
-        :param element_content:
-        :param frame_elements:
-        :param frame_size:
-        """
-
         self._frame_elements = frame_elements
         self._frame_size = frame_size
         self._element_content = element_content
@@ -36,10 +29,8 @@ class BoardElement:
     @card_back.setter
     def card_back(self, element_idx: List[int]):
         """
-        This method sets the value of the private attribute _card_back and expects a list of two integers.
-        Example usage: 'element.card_back = [1, 2]'
-        :param element_idx:             list of two integers, e.g. [2, 3]
-        :return:
+        This method sets the value of the private attribute _card_back
+        and expects a list of two integers. Example usage: 'element.card_back = [1, 2]'
         """
         self._card_back = create_card_frame(f"{element_idx[0]}{element_idx[1]}", self._frame_elements, self._frame_size)
 
@@ -49,8 +40,8 @@ class BoardElement:
 
     def __str__(self):
         """
-        Custom functionality for the default __str__ method for printing content
-        :return:
+        Custom functionality for the default __str__ method for
+        printing content.
         """
         if self.is_visible:
             return self.card_front
@@ -63,20 +54,14 @@ class BoardElement:
 
 class Board:
     """
-    This class bla-bla-BLAAA
+    
     """
 
     def __init__(self, board_size: List[int], start_element: BoardElement):
-        """
-
-        :param board_size:          list of 2 integers specifying the size of the game board in terms of number of rows
-                                    and columns, e.g. [3, 3].
-        :param start_element:       sfgdsgd
-        """
-
         # initialize attributes
         self._board_size = board_size
-        # create a list of start elements then repeat that a number of times equal to the number of rows in the board
+        # create a list of start elements then repeat that a number of
+        # times equal to the number of rows in the board
         self._board_content = [(board_size[1] * [start_element]).copy() for _ in range(board_size[0])]
         self._nb_used_board_cells = 0
 
@@ -94,9 +79,8 @@ class Board:
 
     def __str__(self):
         """
-        Custom functionality for the string method of this class. It merges all the elements of the board into a single
-        string.
-        :return:            board contents a single formatted string.
+        Custom functionality for the string method of this class.
+        It merges all the elements of the board into a single string.
         """
 
         board_str = ""
@@ -111,29 +95,22 @@ class Board:
 
     def insert_board_element(self, element: BoardElement, board_index: List[int]):
         """
-        TBD
-        :param element:             describe parameter
-        :param board_index:
-        :return:
+        
         """
         self._board_content[board_index[0]][board_index[1]] = element
         self._board_content[board_index[0]][board_index[1]].card_back = board_index
 
     def flip_board_element(self, board_index: List[int]):
         """
-        The function flips a card
-
-        :param board_index:
-        :return:
+        The function flips a card.
         """
         self._board_content[board_index[0]][board_index[1]].is_visible = \
             not self._board_content[board_index[0]][board_index[1]].is_visible
 
     def populate_board(self, element_list: List[BoardElement]):
         """
-        This function randomly populates the board with pairs of elements from a card element list
-        :param element_list:
-        :return:
+        This function randomly populates the board with pairs of elements
+        from a card element list.
         """
 
         # create list of possible indexes
@@ -151,15 +128,15 @@ class Board:
             idx = randint(0, len(index_list) - 1)
             self.insert_board_element(element.__copy__(), index_list[idx])
             index_list.pop(idx)
-            # update the number of cards on the board with +2 since we have a pair.
+            # update the number of cards on the board
+            # with +2 since we have a pair.
             self._nb_used_board_cells += 2
             if self._nb_used_board_cells == self.board_size[0] * self.board_size[1]:
                 break
 
     def flip_all_elements(self):
         """
-        This function flips all cards at the same time
-        :return:
+        This function flips all cards at the same time.
         """
         for row in range(0, self._board_size[0]):
             for column in range(0, self._board_size[1]):
@@ -168,10 +145,8 @@ class Board:
 
     def count_flipped_cards(self):
         """
-        This function counts the number of flipped cards
-        :return:
+        This function counts the number of flipped cards.
         """
-
         number_flipped_cards = 0
         for row in range(0, self._board_size[0]):
             for column in range(0, self._board_size[1]):
@@ -182,11 +157,6 @@ class Board:
     def check_board_element_match(self, idx1, idx2):
         """
         Check by card element name whether two elements selected by respective indexes are a match.
-        :param idx1:
-        :param idx2:
-        :return:
         """
 
         return self._board_content[idx1[0]][idx1[1]].element_name == self._board_content[idx2[0]][idx2[1]].element_name
-
-
