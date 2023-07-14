@@ -38,13 +38,20 @@ Memory Game is a Python terminal game, which runs on Heroku. It is a simple logi
 
 ## Site Users Goal
 
+The user of "Memory Game" wants to play a round of a memory game with computer as an opponent.
+
 ## User Stories
 
-## Site Owners Goal
+Users:
+
+* As a user I want to know the rules.    
+* As a user I want to know if I choose the right card.
+* As a user I want to know my score.
 
 # **User Experience (UX)**
 
 ## Flow chart
+The flow chart for this application was made with the online service Lucid App. A clear vision of the process helped to design a core model.
 
 <details><summary><b>Flow Chart</b></summary>
 
@@ -54,6 +61,8 @@ Memory Game is a Python terminal game, which runs on Heroku. It is a simple logi
 [Back to top](<#table-of-content>)
 
 ## Site Structure
+
+The 'Memory Game' is a terminal based application that is being presented in a one page website. When the application starts the user will be presented with a Logo and schort message if a user wants to continue.
 
 ## Design Choices
 
@@ -65,7 +74,40 @@ No specific typography is being used in the application. The font is just the st
 # **Features**
 ## **Existing Features**
 
+* ### Welcome page
+This is the entry point to the game. It is quite simple and consists a logo with a message.
+
+![Start](/assets/readme-images/app_start.png)  
+
+* ### Enter Name
+Then an app asks a user for a name.
+
+![Start](/assets/readme-images/enter_name.png)  
+
 [Back to top](<#table-of-content>)
+
+* ### Rules
+After entering a Name correctly, an app welcomes a player and displays a rules of the game.
+
+![Start](/assets/readme-images/rules.png)  
+
+[Back to top](<#table-of-content>)
+
+* ### Main Board
+
+
+![Board](/assets/readme-images/cards.png) 
+
+*
+
+![Cards choice](/assets/readme-images/card_choice.png) 
+
+[Back to top](<#table-of-content>)
+
+* ### Input validation and error-checking
+
+![Start](/assets/readme-images/)  
+
 
 ### Features Left to Implement
 

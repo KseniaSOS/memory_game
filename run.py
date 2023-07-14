@@ -18,7 +18,7 @@ if __name__ == '__main__':
 
     # create empty board element
     empty_frame = create_empty_frame(layout['frame_size'])
-    empty_frame_element = BoardElement(" ",empty_frame, layout['frame_elements'], layout['frame_size'])
+    empty_frame_element = BoardElement(" ", empty_frame, layout['frame_elements'], layout['frame_size'])
 
     # initialize the game board
     my_board = Board(layout['board_size'], empty_frame_element)
