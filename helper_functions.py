@@ -1,3 +1,5 @@
+import os
+import platform
 import json
 from typing import List
 
@@ -236,3 +238,13 @@ def check_end_game_choice(choice: str, error_messages: dict):
         raise ValueError(error_messages['wrong_choice'])
 
     return True
+
+
+def clear_terminal():
+    """
+    Function for platform dependent clearing of terminal.
+    """
+    if platform.system() == "Windows":
+        os.system('cls')
+    else:
+        os.system('clear')
