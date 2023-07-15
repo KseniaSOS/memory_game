@@ -126,6 +126,7 @@ After entering a Name correctly, an app welcomes a player and displays a rules o
 
 * ### Input validation and error-checking
 
+*
 ![Error Messages](/assets/readme-images/error_messages_cards.png)  
 
 *
@@ -182,6 +183,20 @@ No errors were returned when passing through the [PEP8](https://pep8ci.herokuapp
 ### Fixed Bugs
 
 *
+<details><summary><b>PEP Validation Result</b></summary>
+
+![Bug](/assets/readme-images/bug_1.png)
+
+![Bug](/assets/readme-images/bug_2.png)
+
+*
+![Clear terminal](/assets/readme-images/clear_terminal.png)
+
+
+
+</details><br/>
+
+[Back to top](<#table-of-content>)
 
 # Deployment
 
