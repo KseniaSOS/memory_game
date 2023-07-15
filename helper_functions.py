@@ -244,7 +244,7 @@ def clear_terminal():
     """
     Function for platform dependent clearing of terminal.
     """
-    if platform.system() == "Windows":
+    if os.name == 'nt':
         os.system('cls')
     else:
         os.system('clear')
