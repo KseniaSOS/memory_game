@@ -142,7 +142,7 @@ class Board:
             self._nb_used_board_cells += 2
             if self._nb_used_board_cells == self.board_size[0] * \
                     self.board_size[1]:
-            break
+                break
 
 
 def flip_all_elements(self):
@@ -175,4 +175,4 @@ def check_board_element_match(self, idx1, idx2):
     """
 
     return self._board_content[idx1[0]][idx1[1]].element_name == \
-           self._board_content[idx2[0]][idx2[1]].element_name
+        self._board_content[idx2[0]][idx2[1]].element_name
