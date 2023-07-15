@@ -1,9 +1,11 @@
 import os
+import platform
 from random import randint
 from time import sleep
 from typing import List
 
-from helper_functions import create_nested_list, check_input, check_user_name
+from helper_functions import create_nested_list, check_input, \
+    check_user_name, clear_terminal
 from classes import BoardElement, Board
 
 
@@ -138,7 +140,7 @@ def run_game(board: Board, layout: dict, card_elements: List[BoardElement]):
             for i in range(2):
                 board.flip_board_element(selected_indexes[i])
         sleep(5)
-        os.system('cls')
+        clear_terminal()
 
         # check if all cards are already flipped by the player
         if nb_flipped_cards == nb_used_board_cells:
@@ -166,7 +168,7 @@ def run_game(board: Board, layout: dict, card_elements: List[BoardElement]):
             for i in range(2):
                 board.flip_board_element(selected_indexes[i])
         sleep(5)
-        os.system('cls')
+        clear_terminal()
 
     # finish the game and print result
     if player_score > computer_score:

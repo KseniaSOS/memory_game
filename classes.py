@@ -144,35 +144,32 @@ class Board:
                     self.board_size[1]:
                 break
 
+    def flip_all_elements(self):
+        """
+        This function flips all cards at the same time.
+        """
+        for row in range(0, self._board_size[0]):
+            for column in range(0, self._board_size[1]):
+                self._board_content[row][column].is_visible = \
+                    not self._board_content[row][column].is_visible
 
-def flip_all_elements(self):
-    """
-    This function flips all cards at the same time.
-    """
-    for row in range(0, self._board_size[0]):
-        for column in range(0, self._board_size[1]):
-            self._board_content[row][column].is_visible = \
-                not self._board_content[row][column].is_visible
+    def count_flipped_cards(self):
+        """
+        This function counts the number of flipped cards.
+        """
+        number_flipped_cards = 0
+        for row in range(0, self._board_size[0]):
+            for column in range(0, self._board_size[1]):
+                number_flipped_cards += int(
+                    self._board_content[row][column].is_visible)
 
+        return number_flipped_cards
 
-def count_flipped_cards(self):
-    """
-    This function counts the number of flipped cards.
-    """
-    number_flipped_cards = 0
-    for row in range(0, self._board_size[0]):
-        for column in range(0, self._board_size[1]):
-            number_flipped_cards += int(
-                self._board_content[row][column].is_visible)
+    def check_board_element_match(self, idx1, idx2):
+        """
+        Check by card element name whether two elements selected by
+        respective indexes are a match.
+        """
 
-    return number_flipped_cards
-
-
-def check_board_element_match(self, idx1, idx2):
-    """
-    Check by card element name whether two elements selected by
-    respective indexes are a match.
-    """
-
-    return self._board_content[idx1[0]][idx1[1]].element_name == \
-        self._board_content[idx2[0]][idx2[1]].element_name
+        return self._board_content[idx1[0]][idx1[1]].element_name == \
+            self._board_content[idx2[0]][idx2[1]].element_name

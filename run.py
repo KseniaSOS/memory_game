@@ -1,6 +1,6 @@
 import os
 
-from helper_functions import parse_layout, create_empty_frame
+from helper_functions import parse_layout, create_empty_frame, clear_terminal
 from classes import BoardElement, Board
 from game import run_game
 
@@ -29,7 +29,7 @@ if __name__ == '__main__':
     # run the game
     restart = ""
     while restart == "":
-        os.system('cls')
+        clear_terminal()
         run_game(my_board, layout, card_elements)
         restart = input("Press ENTER to restart:\n")
         while restart != "":
