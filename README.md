@@ -42,8 +42,6 @@ The user of "Memory Game" wants to play a round of a memory game with computer a
 
 ## User Stories
 
-Users:
-
 * As a user I want to know the rules.    
 * As a user I want to know if I choose the right card.
 * As a user I want to know my score.
@@ -55,7 +53,7 @@ The flow chart for this application was made with the online service Lucid App. 
 
 <details><summary><b>Flow Chart</b></summary>
 
-![Flow Chart]()
+![Flow Chart](/assets/readme-images/Flowchart.png)
 </details><br/>
 
 [Back to top](<#table-of-content>)
@@ -89,7 +87,7 @@ Then an app asks a user for a name.
 * ### Rules
 After entering a Name correctly, an app welcomes a player and displays a rules of the game.
 
-![Start](/assets/readme-images/rules.png)  
+![Rules](/assets/readme-images/rules.png)  
 
 [Back to top](<#table-of-content>)
 
@@ -102,16 +100,41 @@ After entering a Name correctly, an app welcomes a player and displays a rules o
 
 ![Cards choice](/assets/readme-images/card_choice.png) 
 
+
+*
+
+![Score](/assets/readme-images/player_successful.png) 
+
+*
+
+![No luck](/assets/readme-images/no_luck.png) 
+
+*
+
+![Comp Turn](/assets/readme-images/comp_missed.png) 
+
+*
+
+![All Images](/assets/readme-images/All_images.png) 
+
+*
+
+![Final Message](/assets/readme-images/final_message.png) 
+
+
 [Back to top](<#table-of-content>)
 
 * ### Input validation and error-checking
 
-![Start](/assets/readme-images/)  
+![Error Messages](/assets/readme-images/error_messages_cards.png)  
+
+*
+![Error Messages](/assets/readme-images/wrong_name_input.png) 
 
 
 ### Features Left to Implement
 
-* 
+* Using colors will really improve the user's visual experience.
 
 [Back to top](<#table-of-content>)
 
@@ -131,22 +154,26 @@ After entering a Name correctly, an app welcomes a player and displays a rules o
 
 ## Python Packages
 
-* [Time](https://docs.python.org/3/library/time.html) - A module that provides various time-related functions
+* [Time](https://docs.python.org/3/library/time.html) 
+* [OS](https://docs.python.org/3/library/os.html) 
+* [Typing](https://docs.python.org/3/library/typing.html?highlight=typing#module-typing)
 
 [Back to top](<#table-of-content>)
 
 # Testing
 
 ## Code Validation
-The "Memory Game" has been tested through [PEP Online Validator](http://pep8online.com/).
+The "Memory Game" has been manually tested. All given invalid inputs were checked: string, numbers or spaces. Tested on my local Pycharm terminal, Gitpod and Code Institute Heroku terminals.
 
 [Back to top](<#table-of-content>)
 
+
 ### PEP Validation
+No errors were returned when passing through the [PEP8](https://pep8ci.herokuapp.com/).
 
 <details><summary><b>PEP Validation Result</b></summary>
 
-![PEP Validation]()
+![PEP Validation](/assets/readme-images/pep8.png)
 </details><br/>
 
 [Back to top](<#table-of-content>)
@@ -256,6 +283,7 @@ The method for cloning a project from GitHub is described below:
 # Credits
 
 * [Real Python](https://realpython.com/lessons/how-and-when-use-str/) - 'How and When to use _ str _' 
+* [Scaler Topics](https://www.scaler.com/topics/how-to-clear-screen-in-python/) - How to Clear Screen in Python?
 * [Geeks for Geeks](https://rb.gy/rt2wz) - Using @property decorators 
 * [ASCII Art Generator](http://patorjk.com/software/taag/#p=display&h=0&v=2&f=Dancing%20Font&t=memory%20%0A%20%20game) - This ASCII generator was used to create the game logo 
 * [ASCII Art ](https://www.asciiart.eu/) - This ollection of ASCII art drawings was used for cards images
