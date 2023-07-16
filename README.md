@@ -1,5 +1,5 @@
 # **Memory Game**
-Memory Game is a Python terminal game, which runs on Heroku. It is a simple logic game, where  users competes with computer, by finding all pairs of cards.
+Memory Game is a Python terminal game, which runs on Heroku. It is a simple logic game, where the user competes with a computer by finding all pairs of cards.
 
 [View live website here](https://memory-game-3p-9d47756bf9a5.herokuapp.com/)
 
@@ -14,7 +14,7 @@ Memory Game is a Python terminal game, which runs on Heroku. It is a simple logi
 
 * [**User Experience (UX)**](<#user-experience-ux>)
     * [Site Structure](<#site-structure>)
-    * [Flow chart](<#flow-chart>)    
+    * [Flow chart](<#flow-chart>)     
     * [Design Choices](<#design-choices>)
 
 * [**Features**](<#features>)
@@ -24,7 +24,7 @@ Memory Game is a Python terminal game, which runs on Heroku. It is a simple logi
 
 * [**Technologies Used**](<#technologies-used>)
     * [Languages](<#languages>)
-    * [Frameworks, Librarys & Software](<#frameworks-libraries--software>)
+    * [Frameworks, Libraries & Software](<#frameworks-libraries--software>)
     * [Python Packages](<#python-packages>)
 
 * [**Testing**](<#testing>)
@@ -38,7 +38,7 @@ Memory Game is a Python terminal game, which runs on Heroku. It is a simple logi
 
 ## Site Users Goal
 
-The user of "Memory Game" wants to play a round of a memory game with computer as an opponent.
+The user of "Memory Game" wants to play a round of a memory game with a computer as an opponent.
 
 ## User Stories
 
@@ -60,20 +60,20 @@ The flow chart for this application was made with the online service Lucid App. 
 
 ## Site Structure
 
-The 'Memory Game' is a terminal based application that is being presented in a one page website. When the application starts the user will be presented with a Logo and schort message if a user wants to continue.
+The 'Memory Game' is a terminal based application that is being presented in a one page website. When the application starts the user will be presented with a Logo and short message if a user wants to continue.
 
 ## Design Choices
 
-* ### Typography
-No specific typography is being used in the application. The font is just the standard font that is being used in the terminal.
+No specific typography or colors are being used in the application. The font is just the standard font that is being used in the terminal.
 
 [Back to top](<#table-of-content>)
 
 # **Features**
 ## **Existing Features**
 
-### Welcome page
-This is the entry point to the game. It is quite simple and consists a logo with a message.
+### Start page
+
+This is the entry point to the game. It is quite simple and consists of a logo with a message.
 
 <details><summary><b>Start</b></summary>  
 
@@ -82,16 +82,18 @@ This is the entry point to the game. It is quite simple and consists a logo with
 </details><br/>
 
 ### Enter Name
-Then an app asks a user for a name.
 
-<details><summary><b>Start</b></summary> 
+Then an app asks a user for a name. An input check function notifies the user if the input name is incorrect.
 
-![Start](/assets/readme-images/enter_name.png)
+<details><summary><b>Name</b></summary> 
+
+![Enter Name](/assets/readme-images/enter_name.png)
 
 </details><br/>
 
 ### Rules
-After entering a Name correctly, an app welcomes a player and displays a rules of the game.
+
+After entering a name correctly, the app welcomes the player and displays the rules of the game. 
 
 <details><summary><b>Rules</b></summary> 
 
@@ -101,7 +103,7 @@ After entering a Name correctly, an app welcomes a player and displays a rules o
 
 ### Main Board
 
-
+A 4 by 4 board is opened with flipped cards (framed ASCII art drawings). Each card has a name, which is necessary when choosing and entering cards. This is a random board generation. The user is playing against the computer.
 
 <details><summary><b>Board</b></summary> 
 
@@ -109,43 +111,51 @@ After entering a Name correctly, an app welcomes a player and displays a rules o
 
 </details><br/>
 
-### 
+### Cards choice
+
+The player chooses cards first. The move takes place in sequence.
 <details><summary><b>Cards choice</b></summary> 
 
 ![Cards choice](/assets/readme-images/card_choice.png) 
 
 </details><br/>
 
+### Score
 
-###
+The Memory Game maintains scores and tells the player whether it was a good or bad move. 
+
 <details><summary><b>Score</b></summary> 
 
 ![Score](/assets/readme-images/player_successful.png) 
-
-</details><br/>
-
-###
-<details><summary><b>No luck</b></summary> 
 
 ![No luck](/assets/readme-images/no_luck.png) 
 
 </details><br/>
 
-###
+### Computers turn
+
+Also displays an opponent's turn with its result.
+
 <details><summary><b>Computers turn</b></summary> 
 
 ![Comp Turn](/assets/readme-images/comp_missed.png) 
 
 </details><br/>
 
-###
-<details><summary><b>Rules</b></summary> 
+### End Game
 
-![All Images](/assets/readme-images/All_images.png) 
+The game continues until all pairs of cards have been found.
+
+<details><summary><b>All cards</b></summary> 
+
+![All cards](/assets/readme-images/All_images.png) 
 
 </details><br/>
 
-###
+### Final Message
+
+In the final message, the player is told who is the winner or if it was a tie. By pressing ENTER, the user can restart the game.
+
 <details><summary><b>Final Message</b></summary> 
 
 ![Final Message](/assets/readme-images/final_message.png) 
@@ -156,10 +166,10 @@ After entering a Name correctly, an app welcomes a player and displays a rules o
 
 * ### Input validation and error-checking
 
-   * User cannot enter card numbers outside the size of the board
-   * User cannot press just ENTER
-   * User cannot enter the same card
-   * User musst enter number
+   * User cannot enter card indeces outside the size of the board.
+   * User cannot just press ENTER.
+   * User cannot enter the same card twice during their turn.
+   * User must enter an index consisting of two subsequent integers.
 
 <details><summary><b>Error messages</b></summary>   
    
@@ -167,10 +177,11 @@ After entering a Name correctly, an app welcomes a player and displays a rules o
 
 ![Error Messages](/assets/readme-images/error_messages_cards.png)  
 
+</details><br/>
 
 ### Features Left to Implement
 
-* Using colors will really improve the user's visual experience.
+* Using colors will further improve the user's visual experience.
 
 [Back to top](<#table-of-content>)
 
@@ -182,7 +193,7 @@ After entering a Name correctly, an app welcomes a player and displays a rules o
 
 ## Frameworks, Libraries & Software
 
-* [PyCharm](https://www.jetbrains.com/pycharm/) - Used a local program on own PC
+* [PyCharm](https://www.jetbrains.com/pycharm/) - Used a local instance on own PC for python-centric developement.
 * [Gitpod](https://www.gitpod.io/#get-started) 
 * [Github](https://github.com/) - Used to host and edit the website.
 * [Heroku](https://en.wikipedia.org/wiki/Heroku) - A cloud platform that the application is deployed to.
@@ -193,43 +204,66 @@ After entering a Name correctly, an app welcomes a player and displays a rules o
 * [Time](https://docs.python.org/3/library/time.html) 
 * [OS](https://docs.python.org/3/library/os.html) 
 * [Typing](https://docs.python.org/3/library/typing.html?highlight=typing#module-typing)
+* [Random](https://docs.python.org/3/library/random.html)
+* [Json](https://docs.python.org/3/library/json.html)
 
 [Back to top](<#table-of-content>)
 
 # Testing
 
 ## Code Validation
-The "Memory Game" has been manually tested. All given invalid inputs were checked: string, numbers or spaces. Tested on my local Pycharm terminal, Gitpod and Code Institute Heroku terminals.
+The "Memory Game" has been manually tested. All given invalid inputs were checked: string, numbers or spaces. Tested on my local Pycharm terminal, Gitpod and Code Institute's Heroku terminals.
 
 [Back to top](<#table-of-content>)
 
 
 ### PEP Validation
-No errors were returned when passing through the [PEP8](https://pep8ci.herokuapp.com/).
+No errors were returned when passing through the [PEP8](https://pep8ci.herokuapp.com/) checker.
 
 <details><summary><b>PEP Validation Result</b></summary>
 
 ![PEP Validation](/assets/readme-images/pep8.png)
 </details><br/>
 
-[Back to top](<#table-of-content>)
+
+## Testing User Stories
+
+* As a user I want to know the rules.
+    * At the beginning of the game the rules will be displayed.    
+   
+* As a user I want to know my score.
+    * Each time a user selects a card, the score will be displayed.
+    * At the end of the game, the player will know if he lost, won or it is a draw.
+ 
+* As a user I want to know if I choose the right card.    
+    * The game will let the user know if the input was incorrect.
+
+ [Back to top](<#table-of-content>)   
 
 ## Known bugs
 ### Fixed Bugs
 
-*
-<details><summary><b>PEP Validation Result</b></summary>
+* The initial corrections for PEP8 issues resulted in incorrect indentation, which turned part of the methods in the Board class into functions. This was corrected accordingly.
+
+<details><summary><b>Bugs</b></summary>
 
 ![Bug](/assets/readme-images/bug_1.png)
 
 ![Bug](/assets/readme-images/bug_2.png)
 
-*
+</details><br/>
+
+* There was a problem with clearing the terminal in Heroku in selected areas of the game. It was fixed, by implementing appropriate code in selected areas of the program.
+
+<details><summary><b>Clear terminal</b></summary>
+
 ![Clear terminal](/assets/readme-images/clear_terminal.png)
 
-
-
 </details><br/>
+
+### Unfixed Bugs
+
+No unfixed bugs.
 
 [Back to top](<#table-of-content>)
 
@@ -336,9 +370,9 @@ The method for cloning a project from GitHub is described below:
 * [Scaler Topics](https://www.scaler.com/topics/how-to-clear-screen-in-python/) - How to Clear Screen in Python?
 * [Geeks for Geeks](https://rb.gy/rt2wz) - Using @property decorators 
 * [ASCII Art Generator](http://patorjk.com/software/taag/#p=display&h=0&v=2&f=Dancing%20Font&t=memory%20%0A%20%20game) - This ASCII generator was used to create the game logo 
-* [ASCII Art ](https://www.asciiart.eu/) - This ollection of ASCII art drawings was used for cards images
+* [ASCII Art ](https://www.asciiart.eu/) - This collection of ASCII art drawings was used for cards images
 * [Lucid](https://lucid.app/) - There was made a flow chart for this project 
-* [Am I Responsive?](https://ui.dev/amiresponsive) - Responsive deisign image
+* [Am I Responsive?](https://ui.dev/amiresponsive) - Responsive design image
 
 [Back to top](<#table-of-content>)
 
