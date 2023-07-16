@@ -72,55 +72,85 @@ No specific typography is being used in the application. The font is just the st
 # **Features**
 ## **Existing Features**
 
-* ### Welcome page
+### Welcome page
 This is the entry point to the game. It is quite simple and consists a logo with a message.
 
-![Start](/assets/readme-images/app_start.png)  
+<details><summary><b>Start</b></summary>  
 
-* ### Enter Name
+![Start](/assets/readme-images/app_start.png)
+
+</details><br/>
+
+### Enter Name
 Then an app asks a user for a name.
 
-![Start](/assets/readme-images/enter_name.png)  
+<details><summary><b>Start</b></summary> 
 
-[Back to top](<#table-of-content>)
+![Start](/assets/readme-images/enter_name.png)
 
-* ### Rules
+</details><br/>
+
+### Rules
 After entering a Name correctly, an app welcomes a player and displays a rules of the game.
+
+<details><summary><b>Rules</b></summary> 
 
 ![Rules](/assets/readme-images/rules.png)  
 
-[Back to top](<#table-of-content>)
+</details><br/>
 
-* ### Main Board
+### Main Board
 
+
+
+<details><summary><b>Board</b></summary> 
 
 ![Board](/assets/readme-images/cards.png) 
 
-*
+</details><br/>
+
+### 
+<details><summary><b>Cards choice</b></summary> 
 
 ![Cards choice](/assets/readme-images/card_choice.png) 
 
+</details><br/>
 
-*
+
+###
+<details><summary><b>Score</b></summary> 
 
 ![Score](/assets/readme-images/player_successful.png) 
 
-*
+</details><br/>
+
+###
+<details><summary><b>No luck</b></summary> 
 
 ![No luck](/assets/readme-images/no_luck.png) 
 
-*
+</details><br/>
+
+###
+<details><summary><b>Computers turn</b></summary> 
 
 ![Comp Turn](/assets/readme-images/comp_missed.png) 
 
-*
+</details><br/>
+
+###
+<details><summary><b>Rules</b></summary> 
 
 ![All Images](/assets/readme-images/All_images.png) 
 
-*
+</details><br/>
+
+###
+<details><summary><b>Final Message</b></summary> 
 
 ![Final Message](/assets/readme-images/final_message.png) 
 
+</details><br/>
 
 [Back to top](<#table-of-content>)
 
