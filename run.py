@@ -7,6 +7,7 @@ from game import run_game
 LAYOUT_JSON = "layout.json"
 
 if __name__ == '__main__':
+    
     # parse the layout
     layout = parse_layout(LAYOUT_JSON)
 

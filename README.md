@@ -126,10 +126,15 @@ After entering a Name correctly, an app welcomes a player and displays a rules o
 
 * ### Input validation and error-checking
 
-*
+   * User cannot enter card numbers outside the size of the board
+   * User cannot press just ENTER
+   * User cannot enter the same card
+   * User musst enter number
+
 ![Error Messages](/assets/readme-images/error_messages_cards.png)  
 
-*
+   *
+   
 ![Error Messages](/assets/readme-images/wrong_name_input.png) 
 
 

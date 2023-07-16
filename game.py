@@ -80,6 +80,7 @@ def run_game(board: Board, layout: dict, card_elements: List[BoardElement]):
     """
     print(layout["logo"])
     input("\nShall we get started? Hit Enter to continue...\n")
+    clear_terminal()
 
     # here we need the check for non-empty a non-numeric string (new function)
     user_name = check_user_name(layout['messages']['error_messages'])
@@ -87,6 +88,7 @@ def run_game(board: Board, layout: dict, card_elements: List[BoardElement]):
     print(f"Welcome {user_name}! Here are the rules:")
     print(display_rules())
     input("Hit Enter to continue...\n")
+    clear_terminal()
 
     # populate the board from the card element list
     board.populate_board(card_elements)
@@ -121,6 +123,7 @@ def run_game(board: Board, layout: dict, card_elements: List[BoardElement]):
             index_dict, layout['messages'])
         for i in range(2):
             board.flip_board_element(selected_indexes[i])
+        clear_terminal()
         print(board)
 
         # check if successful and update the score.
