@@ -54,9 +54,8 @@ The flow chart for this application was made with the online service Lucid App. 
 <details><summary><b>Flow Chart</b></summary>
 
 ![Flow Chart](/assets/readme-images/Flowchart.png)
-</details><br/>
 
-[Back to top](<#table-of-content>)
+</details><br/>
 
 ## Site Structure
 
@@ -161,8 +160,6 @@ In the final message, the player is told who is the winner or if it was a tie. B
 ![Final Message](/assets/readme-images/final_message.png) 
 
 </details><br/>
-
-[Back to top](<#table-of-content>)
 
 * ### Input validation and error-checking
 
