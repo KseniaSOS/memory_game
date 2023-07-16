@@ -131,11 +131,11 @@ After entering a Name correctly, an app welcomes a player and displays a rules o
    * User cannot enter the same card
    * User musst enter number
 
-![Error Messages](/assets/readme-images/error_messages_cards.png)  
-
-   *
+<details><summary><b>Error messages</b></summary>   
    
 ![Error Messages](/assets/readme-images/wrong_name_input.png) 
+
+![Error Messages](/assets/readme-images/error_messages_cards.png)  
 
 
 ### Features Left to Implement
